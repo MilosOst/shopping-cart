@@ -10,7 +10,7 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="logo">
-                <h2>Fake Store</h2>
+                <h2>XLUSV</h2>
             </div>
             <ul className="nav-links">
                 <li><Link to="/" className={"nav-link " + (activeIndex === 0 ? "active" : "")} onClick={() => setActiveIndex(0)}>Home</Link></li>
