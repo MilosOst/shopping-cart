@@ -16,4 +16,5 @@ html, body, #root, .App {
     display: flex;
     flex-direction: column;
     font-family: 'Roboto Mono', monospace;
+    line-height: 1.5;
 }
