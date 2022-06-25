@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar.js";
+import Home from "./components/Home.js";
 
 import { Routes, Route } from "react-router-dom";
 
@@ -7,7 +8,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-          <Route path="/" element={<Navbar />}/>
+          <Route path="/" element={<Home />}/>
       </Routes>
     </div>
   );
