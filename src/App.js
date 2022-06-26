@@ -12,15 +12,15 @@ function App() {
 	const [items, setItems] = useState([]);
 	const [quantity, setQuantity] = useState(0);
 	const [cartActive, setCartActive] = useState(false);
+	const [total, setTotal] = useState(0);
 
 	const addItem = (newItem) => {
-		const itemExists = items.find((item) => item.name === newItem.name);
+		const itemsCopy = [...items];
+		const itemExists = itemsCopy.find((item) => item.name === newItem.name);
 
 		if (itemExists) {
-			const otherItems = items.filter((item) => item.name !== newItem.name);
-			const itemCopy = {...itemExists};
-			itemCopy.quantity += 1;
-			setItems([...otherItems, itemCopy]);
+			itemExists.quantity += 1;
+			setItems(itemsCopy);
 		}
 		else {
 			setItems(items.concat({
@@ -33,14 +33,36 @@ function App() {
 		setQuantity(quantity + 1);
 	};
 
+	const removeItem = (item) => {
+		if (item.quantity === 1) {
+			const updatedItems = items.filter((element) => element.name !== item.name);
+			setItems(updatedItems);
+		}
+		else {
+			const itemsCopy = [...items];
+			const targetItem = itemsCopy.find((element) => element.name === item.name);
+			targetItem.quantity -= 1;
+			setItems(itemsCopy);
+		}
+		setQuantity(quantity - 1);
+	};
+
 	useEffect(() => {
-		console.log(items.length);
-	});
+		const calculateTotal = () => {
+			let currTotal = 0;
+            for (let item of items) {
+                currTotal += item.price * item.quantity;
+            }
+			setTotal(currTotal);
+        }
+		
+        calculateTotal();
+	}, [items]);
 
 	return (
 		<div className="App">
 			<Navbar items={items} quantity={quantity} setCartActive={setCartActive}/>
-			{cartActive && <Cart items={items} setCartActive={setCartActive}/>}
+			{cartActive && <Cart items={items} setCartActive={setCartActive} addItem={addItem} removeItem={removeItem} total={total}/>}
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="about" element={<About />} />
