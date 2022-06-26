@@ -1,0 +1,126 @@
+.cart-modal {
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 85%);
+}
+
+.cart-backdrop {
+    flex: 1;
+}
+
+.cart-area {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    padding: 2rem 1rem;
+    background-color: whitesmoke;
+}
+
+.close-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background-color: inherit;
+    border: none;
+    transform: rotate(45deg);
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.cart-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.cart-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.cart-item-image {
+    height: 100px;
+    width: 100px;
+    background-color: gray;
+}
+
+.cart-item-image > img {
+    height: inherit;
+    width: inherit;
+}
+
+.cart-item-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+    text-align: center;
+}
+
+.cart-item-name {
+    font-weight: bold;
+}
+
+.quantity-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    width: 80%;
+}
+
+.quantity-btn {
+    border: none;
+    background-color: inherit;
+    font-size: 2rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.item-quantity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 2rem;
+    border: 1px solid gray;
+}
+
+.checkout {
+    text-decoration: none;
+}
+
+.checkout-btn {
+    display: block;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .cart-area {
+        width: 100%;
+        overflow-y: auto;
+    }
+}

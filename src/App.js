@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar.js";
 import Home from "./components/Home.js";
 import About from "./components/About.js";
 import Shop from "./components/Shop.js";
+import Cart from "./components/Cart.js";
 
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -10,6 +11,7 @@ import {CartContext} from  "./contexts/CartContext.js";
 function App() {
 	const [items, setItems] = useState([]);
 	const [quantity, setQuantity] = useState(0);
+	const [cartActive, setCartActive] = useState(false);
 
 	const addItem = (newItem) => {
 		const itemExists = items.find((item) => item.name === newItem.name);
@@ -37,7 +39,8 @@ function App() {
 
 	return (
 		<div className="App">
-			<Navbar items={items} quantity={quantity}/>
+			<Navbar items={items} quantity={quantity} setCartActive={setCartActive}/>
+			{cartActive && <Cart items={items} setCartActive={setCartActive}/>}
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="about" element={<About />} />
