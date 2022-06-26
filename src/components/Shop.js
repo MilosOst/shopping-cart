@@ -7,7 +7,7 @@ import jordanShoes from "../data/jordan.js";
 import adidasShoes from "../data/adidas.js";
 import { useEffect, useState } from "react";
 
-function Shop() {
+function Shop({ addItem }) {
     const initialShoes = [...nikeShoes, ...jordanShoes, ...adidasShoes];
     const [shoes, setShoes] = useState(initialShoes);
 
@@ -24,7 +24,7 @@ function Shop() {
             </aside>
             <div className="items-grid">
                 {shoes.map((shoe) => {
-                    return <ShopItem key={shoe.name} name={shoe.name} price={shoe.price} image={shoe.image}/>
+                    return <ShopItem key={shoe.name} shoe={shoe} />
                 })}
             </div>
         </main>

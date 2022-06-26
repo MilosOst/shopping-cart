@@ -4,7 +4,7 @@ import styles from "../styles/navbar.css"
 import globalStyles from "../styles/global.css";
 import { useState } from "react";
 
-function Navbar() {
+function Navbar({ items, quantity }) {
     let location = useLocation();
 
     return (
@@ -18,8 +18,10 @@ function Navbar() {
                 <li><Link to="about" className={"nav-link " + (location.pathname === "/about" ? "active" : "")}>About</Link></li>
             </ul>
             <div className="cart-section">
-                <h3>Cart</h3>
-                <img src={shoppingCart} alt="Shopping Cart" className="cart-pic"/>
+                <button className="open-cart">
+                    <img src={shoppingCart} alt="Shopping Cart" className="cart-pic"/>
+                </button>
+                {(quantity !== 0) && <i className="quantity-icon">{quantity}</i>}
             </div>
         </nav>
     );

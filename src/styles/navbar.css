@@ -44,11 +44,38 @@
 
 .cart-section {
     display: flex;
+    position: relative;
     gap: 1rem;
+    transition: 0.15s;
 }
 
-.cart-pic {
+.cart-section:hover {
+    transform: scale(1.05);
+}
+
+.open-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 50%;
     cursor: pointer;
+    background-color: inherit;
+    border: 1px solid black;
+}
+
+.quantity-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    background-color: lightblue;
+    font-family: 'Roboto', sans-serif;
 }
 
 @media (max-width:768px) {

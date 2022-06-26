@@ -1,15 +1,15 @@
 import AddButton from "./AddButton.js";
 
-function ShopItem({ image, alt, name, price }) {
+function ShopItem({ shoe }) {
 
     return (
         <div className="shop-item">
             <div className="img-box">
-                <img src={image} alt={alt} className="item-img"/>
+                <img src={shoe.image} alt={shoe.alt} className="item-img" />
             </div>
-            <h2 className="item-name">{name}</h2>
-            <h3 className="item-price">{price}</h3>
-            <AddButton />
+            <h2 className="item-name">{shoe.name}</h2>
+            <h3 className="item-price">${shoe.price}</h3>
+            <AddButton shoe={shoe}/>
         </div>
     );
 }

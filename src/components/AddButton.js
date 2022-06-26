@@ -1,10 +1,13 @@
 import styles from "../styles/addbtn.css";
 import globalStyles from "../styles/global.css";
+import { CartContext } from "../contexts/CartContext.js";
+import { useContext } from "react";
 
-function AddButton() {
+function AddButton({ shoe }) {
+    const { addItem } = useContext(CartContext);
 
     return (
-        <button className="add-btn">
+        <button className="add-btn" onClick={() => {addItem(shoe)}}>
             ADD TO CART
         </button>
     );
