@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.452a73e3.css",
+    "main.js": "/shopping-cart/static/js/main.32d17cf9.js",
+    "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
+    "static/media/about-hero.jpg": "/shopping-cart/static/media/about-hero.aa3195546845715df94c.jpg",
+    "static/media/hero-img.jpg": "/shopping-cart/static/media/hero-img.7eb996855135975e545f.jpg",
+    "static/media/jordan1-retro-high.webp": "/shopping-cart/static/media/jordan1-retro-high.a6e22d3d7166cd1f7899.webp",
+    "static/media/air-vapormax.webp": "/shopping-cart/static/media/air-vapormax.11e2fe3d1eac2488669d.webp",
+    "static/media/react-vision.webp": "/shopping-cart/static/media/react-vision.caf7b0d4fd642116c557.webp",
+    "static/media/jordan1-mid.webp": "/shopping-cart/static/media/jordan1-mid.7163647044522d25596e.webp",
+    "static/media/ultraboost22.webp": "/shopping-cart/static/media/ultraboost22.64cafd9259b866ab786d.webp",
+    "static/media/airforce.webp": "/shopping-cart/static/media/airforce.938d4121d92ef31c936b.webp",
+    "static/media/blazer-mid.webp": "/shopping-cart/static/media/blazer-mid.dd4b29c8abf7bdd0e5d6.webp",
+    "static/media/nmdr1.webp": "/shopping-cart/static/media/nmdr1.3be4e0877bd909d01bfd.webp",
+    "static/media/jordan5-retro.webp": "/shopping-cart/static/media/jordan5-retro.fe05e04fb13225f56b84.webp",
+    "index.html": "/shopping-cart/index.html",
+    "static/media/shopping-cart.svg": "/shopping-cart/static/media/shopping-cart.8a1f3f3e6fbb22911b5180ab1d2a59b6.svg",
+    "main.452a73e3.css.map": "/shopping-cart/static/css/main.452a73e3.css.map",
+    "main.32d17cf9.js.map": "/shopping-cart/static/js/main.32d17cf9.js.map",
+    "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.452a73e3.css",
+    "static/js/main.32d17cf9.js"
+  ]
+}
