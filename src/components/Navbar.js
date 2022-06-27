@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import shoppingCart from "../imgs/shopping-cart.svg";
 import styles from "../styles/navbar.css"
 import globalStyles from "../styles/global.css";
-import { useState } from "react";
+
 
 function Navbar({ items, quantity, setCartActive }) {
     let location = useLocation();

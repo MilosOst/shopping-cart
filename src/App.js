@@ -62,7 +62,14 @@ function App() {
 	return (
 		<div className="App">
 			<Navbar items={items} quantity={quantity} setCartActive={setCartActive}/>
-			{cartActive && <Cart items={items} setCartActive={setCartActive} addItem={addItem} removeItem={removeItem} total={total}/>}
+			{cartActive &&
+				<Cart
+				items={items}
+				setCartActive={setCartActive}
+				addItem={addItem}
+				removeItem={removeItem}
+				total={total}
+				/>}
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="about" element={<About />} />

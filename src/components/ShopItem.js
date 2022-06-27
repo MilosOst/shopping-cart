@@ -1,3 +1,6 @@
+import styles from "../styles/shop.css";
+import globalStlyes from "../styles/global.css";
+
 import AddButton from "./AddButton.js";
 
 function ShopItem({ shoe }) {

@@ -1,3 +1,6 @@
+import styles from "../styles/cart.css";
+import globalStyles from "../styles/global.css";
+
 function CartItem({ item, addItem, removeItem }) {
 
     return (

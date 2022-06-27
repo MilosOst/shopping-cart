@@ -1,11 +1,10 @@
 import globalStyles from "../styles/global.css";
 import styles from "../styles/shop.css";
 import ShopItem from "./ShopItem.js";
-import blazer from "../imgs/shoes/blazer-mid.webp";
 import nikeShoes from "../data/nike.js";
 import jordanShoes from "../data/jordan.js";
 import adidasShoes from "../data/adidas.js";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function Shop({ addItem }) {
     const initialShoes = [...nikeShoes, ...jordanShoes, ...adidasShoes];
@@ -24,7 +23,7 @@ function Shop({ addItem }) {
             </aside>
             <div className="items-grid">
                 {shoes.map((shoe) => {
-                    return <ShopItem key={shoe.name} shoe={shoe} />
+                    return (<ShopItem key={shoe.name} shoe={shoe} />);
                 })}
             </div>
         </main>
